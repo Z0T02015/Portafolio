@@ -26,21 +26,13 @@ npm run build
 
 Los textos y elementos se editan en `src/data/`, incluyendo las traducciones a español, inglés y portugués. Los componentes visuales están en `src/components/`. Mistilabs es privado y no se proporcionó una captura real; su tarjeta usa una representación conceptual. Consulta [docs/IMAGES.md](docs/IMAGES.md) antes de añadir evidencias.
 
-## Publicar
+## Publicar en GitHub Pages
 
-1. Crea un repositorio vacío en GitHub y revisa que no contenga datos privados.
-2. Inicializa y publica el repositorio:
+El repositorio `Z0T02015/Portafolio` se publica como sitio estático mediante GitHub Actions. El flujo de trabajo compila Next.js y despliega la carpeta `out` al sitio `https://z0t02015.github.io/Portafolio/` cada vez que se actualiza la rama `main`.
 
-```bash
-git init
-git add .
-git commit -m "Create Cristhian Soto portfolio"
-git branch -M main
-git remote add origin https://github.com/USUARIO/REPOSITORIO.git
-git push -u origin main
-```
+En GitHub, abre **Settings → Pages** y selecciona **GitHub Actions** como fuente de despliegue. Después de subir los cambios a `main`, revisa la pestaña **Actions** para confirmar que el flujo termine correctamente.
 
-3. Importa el repositorio en [Vercel](https://vercel.com/new), conserva los comandos predeterminados de Next.js y despliega. Sustituye `USUARIO/REPOSITORIO` por datos reales. Aún no se ha publicado ningún repositorio ni sitio.
+La publicación usa `NEXT_PUBLIC_BASE_PATH=/Portafolio` para que las imágenes, estilos, scripts y enlaces carguen desde la ruta del repositorio. Para desarrollo local, esta variable queda vacía y se puede seguir usando `npm run dev`.
 
 ## Evidencias y privacidad
 
