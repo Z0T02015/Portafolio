@@ -15,9 +15,10 @@
 | `public/images/certificates/full/english-a2.webp` | Inglés General A2 |
 | `public/images/certificates/full/fibertel-internship.webp` | Certificado de pasantías Fibertel |
 | `public/images/certificates/full/safe-hand-pro.webp` | Constancia formativa SAFE HAND PRO |
-| `public/documents/cv-cristhian-soto.pdf` | CV de Cristhian Soto, disponible para descarga |
+| `public/images/cv/cv-page-1.webp` | Primera página del CV, abre en el visor del portafolio |
+| `public/images/cv/cv-page-2.webp` | Segunda página del CV, abre en el visor del portafolio |
 
-Las páginas completas de certificados se renderizaron desde los PDF aportados para mantener la calidad y dejar visibles las firmas, los sellos y los códigos de validación. En la constancia formativa se cubrió únicamente el dato de identidad; la firma institucional queda visible. El CV original se publica como archivo descargable a solicitud de Cristhian.
+Las páginas completas de certificados se renderizaron desde los PDF aportados para mantener la calidad y dejar visibles las firmas, los sellos y los códigos de validación. En la constancia formativa se cubrió únicamente el dato de identidad; la firma institucional queda visible. Las dos páginas del CV se muestran como imágenes optimizadas dentro del visor integrado; el PDF no se incluye en el sitio.
 
 No se proporcionó una captura real de Mistilabs. Su tarjeta usa una maqueta CSS identificada como representación conceptual; el proyecto es privado y no muestra enlaces de demo o repositorio.
 

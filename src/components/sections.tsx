@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { ArrowDown, ArrowRight, ArrowUpRight, Award, Bot, BriefcaseBusiness, Cloud, Code2, Database, Download, Globe2, GraduationCap, Layers3, MapPin, MessageCircle, Phone, Pickaxe, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowRight, ArrowUpRight, Award, Bot, BriefcaseBusiness, Cloud, Code2, Database, FileText, Globe2, GraduationCap, Layers3, MapPin, MessageCircle, Phone, Pickaxe, Sparkles } from 'lucide-react';
 import { ContactLinks } from '@/components/contact-links';
 import { credentials } from '@/data/credentials';
 import { complementaryDocuments } from '@/data/education';
@@ -12,7 +12,7 @@ import { links } from '@/data/links';
 import { areasOfInterest } from '@/data/skills';
 import { ContactBar } from '@/components/contact-bar';
 import { useLanguage } from '@/components/language-provider';
-import { LightboxTrigger } from '@/components/image-lightbox';
+import { DocumentLightboxTrigger, LightboxTrigger } from '@/components/image-lightbox';
 import { assetPath } from '@/lib/asset-path';
 
 export function Hero() {
@@ -28,7 +28,7 @@ export function Hero() {
       <div className="hero-socials"><span>{t('hero.social')}</span><ContactLinks compact /></div>
       <div className="hero-technologies"><span>{t('hero.skills')}</span><div>{technologies.map(item => <small key={item}>{item}</small>)}</div><p>{t('hero.skillsnote')}</p></div>
     </div>
-    <div className="hero-art reveal" aria-label="Retrato de Cristhian Soto"><div className="portrait-card"><div className="portrait-image"><Image src={assetPath('/images/profile/cristhian-soto.webp')} alt="Cristhian Soto con traje azul" width={1100} height={1059} priority /></div><div className="portrait-caption"><div><strong>Cristhian Soto</strong><span>{t('hero.cardrole')}</span></div><span className="portrait-location"><MapPin size={15} />{t('hero.location')}</span></div><div className="portrait-orbit portrait-orbit-one" /><div className="portrait-orbit portrait-orbit-two" /></div><a className="button button-primary hero-cv" href={assetPath('/documents/cv-cristhian-soto.pdf')} download="CV_Cristhian_Soto.pdf"><Download size={16} />{t('hero.cv')}</a></div>
+    <div className="hero-art reveal" aria-label="Retrato de Cristhian Soto"><div className="portrait-card"><div className="portrait-image"><Image src={assetPath('/images/profile/cristhian-soto.webp')} alt="Cristhian Soto con traje azul" width={1100} height={1059} priority /></div><div className="portrait-caption"><div><strong>Cristhian Soto</strong><span>{t('hero.cardrole')}</span></div><span className="portrait-location"><MapPin size={15} />{t('hero.location')}</span></div><div className="portrait-orbit portrait-orbit-one" /><div className="portrait-orbit portrait-orbit-two" /></div><DocumentLightboxTrigger className="hero-cv" title="CV de Cristhian Soto" label={t('hero.cv')} pages={[{ src: assetPath('/images/cv/cv-page-1.webp'), alt: 'CV de Cristhian Soto, página 1', width: 1325, height: 1872 }, { src: assetPath('/images/cv/cv-page-2.webp'), alt: 'CV de Cristhian Soto, página 2', width: 1325, height: 1872 }]}><FileText size={16} /><span>CV</span><ArrowUpRight size={13} /></DocumentLightboxTrigger></div>
     <a className="hero-scroll" href="#about"><span /> {t('hero.scroll')}</a>
   </section>;
 }
